@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}
+    container_name: prod_frontend
+    restart: always
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
