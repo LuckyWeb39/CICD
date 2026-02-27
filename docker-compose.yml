@@ -1,0 +1,28 @@
+services:
+  app-dev:
+    profiles: ["dev"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    stdin_open: true
+    tty: true
+
+  app-prod:
+      profiles: ["prod"]
+      build:
+        context: .
+        dockerfile: Dockerfile
+        target: prod
+        args:
+          VITE_API_URL: ${VITE_API_URL}
+          SECRET_KEY: ${SECRET_KEY}
+      ports:
+        - "8080:80"
