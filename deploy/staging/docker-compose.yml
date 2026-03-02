@@ -1,7 +1,7 @@
 services:
-  prod_web:
+  staging_web:
     image: nginx:stable-alpine
-    container_name: prod_web
+    container_name: staging_web
     volumes:
       - ../../dist:/usr/share/nginx/html:ro
       - ../../nginx-spa.conf:/etc/nginx/conf.d/default.conf:ro
