@@ -1,10 +1,7 @@
 services:
   staging_web:
-    image: nginx:stable-alpine
+    image: LuckyWeb39/CICD:${IMAGE_TAG}
     container_name: staging_web
-    volumes:
-      - ../../dist:/usr/share/nginx/html:ro
-      - ../../nginx-spa.conf:/etc/nginx/conf.d/default.conf:ro
     restart: unless-stopped
     networks:
       - webnet
