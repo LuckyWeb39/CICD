@@ -1,6 +1,6 @@
 services:
   staging_web:
-    image: LuckyWeb39/CICD:${IMAGE_TAG}
+    image: luckyweb39/CICD:${IMAGE_TAG}
     container_name: staging_web
     restart: unless-stopped
     networks:

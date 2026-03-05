@@ -1,6 +1,6 @@
 services:
   prod_web:
-    image: LuckyWeb39/CICD:${IMAGE_TAG}
+    image: luckyweb39/CICD:${IMAGE_TAG}
     container_name: prod_web
     restart: unless-stopped
     networks:
