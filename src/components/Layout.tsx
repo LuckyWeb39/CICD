@@ -1,8 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 
 export const Layout = () => {
-    const google = import.meta.env.VITE_API_URL
-    const ya = import.meta.env.SECRET_URL
     return (
         <>
             <header>
