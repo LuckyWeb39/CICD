@@ -2,8 +2,8 @@ pipeline {
 	agent any
 
 	environment {
-		REGISTRY = "LuckyWeb39"
-		IMAGE_NAME = "CICD"
+		REGISTRY = "luckyweb39"
+		IMAGE_NAME = "cicd"
 		IMAGE_TAG = "${env.GIT_COMMIT}"
 		FULL_IMAGE = "${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
 	}
