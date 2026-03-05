@@ -11,8 +11,6 @@ export const Layout = () => {
                     <Link to={'/'}>Home</Link>
                     <Link to={'/about'}>About</Link>
                     <Link to={'/counter'}>Counter</Link>
-                    <a target='_blank' href={google}>Google</a>
-                    <a target='_blank' href={ya}>Ya</a>
                 </nav>
             </header>
             <main style={{flex: '1'}}>
