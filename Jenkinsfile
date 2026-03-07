@@ -14,7 +14,7 @@ pipeline {
 					[key: 'comment_body', value: '$.comment.body'],
 					[key: 'pr_url',       value: '$.issue.pull_request.url']
 				],
-				tokenCredentialId: 'github-comment-trigger',
+				tokenCredentialId: 'GIT_SEC',
 				causeString: 'GitHub comment trigger: $comment_body',
 				printContributedVariables: true,
 				printPostContent: false,
