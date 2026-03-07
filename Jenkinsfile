@@ -6,6 +6,22 @@ pipeline {
 		IMAGE_NAME = "cicd"
 		IMAGE_TAG = "${env.GIT_COMMIT}"
 		FULL_IMAGE = "${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
+
+		triggers {
+			GenericTrigger(
+				genericVariables: [
+					[key: 'action',       value: '$.action'],
+					[key: 'comment_body', value: '$.comment.body'],
+					[key: 'pr_url',       value: '$.issue.pull_request.url']
+				],
+				tokenCredentialId: 'GIT_SEC',
+				causeString: 'GitHub comment trigger: $comment_body',
+				printContributedVariables: true,
+				printPostContent: false,
+				regexpFilterText: '$action $comment_body $pr_url',
+				regexpFilterExpression: '^created npm run PROD .+$'
+			)
+		}
 	}
 
 	stages {
