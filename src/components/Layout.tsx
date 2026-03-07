@@ -8,7 +8,7 @@ export const Layout = () => {
                 <nav style={{display: 'flex', gap: '30px'}}>
                     <Link to={'/'}>Home</Link>
                     <Link to={'/about'}>About CI/CD</Link>
-                    <Link to={'/counter'}>Counter ot Dimasa</Link>
+                    <Link to={'/counter'}>Counter ot Dimasa-Ananasa</Link>
                 </nav>
             </header>
             <main style={{flex: '1'}}>
