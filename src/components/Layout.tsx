@@ -7,7 +7,7 @@ export const Layout = () => {
                 <h1>Jenkins</h1>
                 <nav style={{display: 'flex', gap: '30px'}}>
                     <Link to={'/'}>Home</Link>
-                    <Link to={'/about'}>About</Link>
+                    <Link to={'/about'}>About CI/CD</Link>
                     <Link to={'/counter'}>Counter</Link>
                 </nav>
             </header>
