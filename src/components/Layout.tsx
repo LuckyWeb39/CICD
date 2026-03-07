@@ -4,7 +4,7 @@ export const Layout = () => {
     return (
         <>
             <header>
-                <h1>NEW MENU</h1>
+                <h1>Jenkins</h1>
                 <nav style={{display: 'flex', gap: '30px'}}>
                     <Link to={'/'}>Home</Link>
                     <Link to={'/about'}>About</Link>
